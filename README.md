@@ -1,5 +1,6 @@
 # pazuzu
 [![Travis BuildStatus](https://travis-ci.org/zalando/pazuzu.svg?branch=master)](https://travis-ci.org/zalando/pazuzu)
+[![Coverage Status](https://coveralls.io/repos/github/zalando/pazuzu/badge.svg?branch=master)](https://coveralls.io/github/zalando/pazuzu?branch=master)
 
 What is Pazuzu?
 ---------------

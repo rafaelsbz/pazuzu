@@ -8,3 +8,14 @@ services:
 go:
   - 1.6
   - tip
+
+install:
+  - go get -v
+  - go get github.com/mattn/goveralls
+
+script:
+  - goveralls -repotoken $COVERALLS_TOKEN
+
+env:
+  global:
+    secure: uEqqCaqUa3hxvX90mjOYp8jHvxMYJdO5TEKF8KAekIMAj1IkgMm17dfOgMQi2QrAwrJtu1wQBPenKhh5IToPs0AqLU5QWr2CY+y3K+l9GHmQjUXgmLlhasge9HwIkQucamacNWVIMZtzj+Gbyjg+GG+O9i1Bl/ER3EoegYS7xYbD6+pyr2qoqTc4jjC0v5BxgK3WXM93pAsaHPr1g7JDvceVWrNhi9agwekFogruhB7I6Qx6ggwUkw53Q0UfOiYx1pkecVYrzTfWaOzFZZQD6vERuCqa/A8LmyL/uUNyZOrOW2zkl8Mt/mkHs2lTa+9WdjYr7fM1OZd2nXwCkJC50RqIiIkdfmCmYafwWdthOCu9Q/wl4Eu1RPybRMIGaYBpF9rHLQ6CXk2pmcdFnH+p6ZzYcqxSVErDitw69oSH8EWj9bdYfxVYA9c2sUtxrqLIhqIgmoFcSFC0wUpE1t1P6bDfliabj1mnzAawdkqUr2ybDTlbOJCAm9Wz/a3++iGFJZMafdV04HiDlBI373DffRqZKWFpNmKAGyk7NgcDSO1uZ8dv+FzkkMFf+re/uJI8hFG698na9G18BGD3g9vs3Nx6VNK9w1HeXP4tMkeUtSYKrxyYdNAPlEcrvbVoIiegsOXbrhwuDSdhcQ/GwDQtHa6fVHyttJH/C1sIMZ6oYiE=
