@@ -1,6 +1,7 @@
 package storageconnector
 
 import (
+	"fmt"
 	"io/ioutil"
 	"path"
 	"strings"
@@ -185,6 +186,7 @@ func getFeature(commit *git.Commit, name string) (Feature, error) {
 	if err != nil {
 		return Feature{}, err
 	}
+	fmt.Printf("Content: %s\n", content)
 
 	return Feature{
 		Meta:    meta,

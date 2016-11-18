@@ -207,7 +207,7 @@ var buildCmd = cli.Command{
 
 // Fetches and builds features into a docker image.
 func buildFeatures(c *cli.Context) error {
-	// TODO: Make file configurable via CLI args (GH Issue #102)
+	// TODO: Make file configurable via CLI args
 	fileName := "Pazuzufile"
 
 	file, err := os.Open(fileName)
@@ -218,7 +218,7 @@ func buildFeatures(c *cli.Context) error {
 	defer file.Close()
 
 	config := pazuzu.GetConfig()
-	storageReader, err := pazuzu.GetStorageReader(*config)
+	storageReader, err := pazuzu.GetStorageReader(config)
 
 	reader := bufio.NewReader(file)
 	pazuzuFile, err := pazuzu.Read(reader)
