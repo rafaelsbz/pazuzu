@@ -218,7 +218,7 @@ func buildFeatures(c *cli.Context) error {
 	defer file.Close()
 
 	config := pazuzu.GetConfig()
-	storageReader, err := pazuzu.GetStorageReader(config)
+	storageReader, err := pazuzu.GetStorageReader(*config)
 
 	reader := bufio.NewReader(file)
 	pazuzuFile, err := pazuzu.Read(reader)
